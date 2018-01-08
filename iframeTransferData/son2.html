@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    我是子页面2
+    <div id="box">我是子页面2的盒子</div>
+    <script>
+        function son2(){
+            console.log('我是子页面2的函数')
+        }
+        document.addEventListener('click',function(){
+            console.log(parent.document.querySelector('#son1').querySelector('iframe').contentWindow.son())
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../lib/layui/css/layui.css">
+    <script src="../../lib/jquery/jquery.js"></script>
+    <script src="../../lib/layui/layui.js"></script>
+</head>
+
+<body>
+    <button class="layui-btn layui-btn-sm son1btn">按钮1111</button>
+    <script>
+        function son() {
+            console.log('我是子页面1的方法');
+        }
+        parent.window.parent();
+        window.parent.document.querySelector('.btn1').innerHTML = 'btn1';
+        window.parent.frames[name = "child"].document.querySelector('#box').textContent = '我是由son1修改后的内容'
+    //   window.parent.frames[name = "son2"];
+        layui.use('layer', function () {
+            var layer = layui.layer;
+            $('.son1btn').on('click', function () {
+                parent.layer.open({
+                    type:2,
+                    title:'title',
+                    id:'son11',
+                    content:'./son2.html',
+                    area:['300px','300px'],
+                    success:function (layero,index) {  
+                        console.log(layero)
+                        console.log(index)
+                    }
+                })
+            })
+        })
+        //    console.log(parent)
+    </script>
+</body>
+
+</html>

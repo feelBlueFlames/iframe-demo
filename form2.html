@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function X() {
+        alert(11);
+        return false;
+    }
+
+    function Y() {
+        alert(1);
+    }
+</script>
+
+<body>
+    <form action="#" method="post" name="form1" onsubmit="return X();">
+        <input type="text" value=""  required/>
+        <input type="submit" value="提交" />
+    </form>
+</body>
+
+</html>
